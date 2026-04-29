@@ -2,3 +2,8 @@ Thumbs.db
 .DS_Store
 *.tmp
 *.bak
+logs/
+*.log
+__pycache__/
+.pytest_cache/
+.venv/

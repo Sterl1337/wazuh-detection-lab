@@ -51,7 +51,3 @@ wazuh-detection-lab/
 4. Replay the events in `test_events/`
 5. Compare the expected analyst writeups in `alerts/`
 6. Use `docs/mitre_mapping.md` and `docs/lessons_learned.md` for the portfolio narrative
-
-## Notes
-
-The repository also contains supporting documentation under `docs/` and sample payloads under `samples/`. The canonical recruiter-facing structure is the one listed above.
