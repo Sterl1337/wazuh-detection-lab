@@ -1,0 +1,8 @@
+{
+  "host": "lab-endpoint-01",
+  "source": "synthetic",
+  "event_type": "authentication",
+  "message": "Repeated failed logon sequence for lab validation",
+  "failure_count": 5,
+  "window_seconds": 60
+}

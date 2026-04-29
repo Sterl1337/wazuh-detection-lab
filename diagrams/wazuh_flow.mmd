@@ -1,0 +1,6 @@
+flowchart LR
+    A[Test endpoint] --> B[Wazuh agent]
+    B --> C[Wazuh manager]
+    C --> D[Custom rule match]
+    D --> E[Alert created]
+    E --> F[Analyst review]

@@ -1,0 +1,10 @@
+{
+  "host": "lab-endpoint-01",
+  "source": "synthetic",
+  "event_type": "file_activity",
+  "message": "Synthetic archive staging event for zip and 7z handling",
+  "paths": [
+    "C:\\Temp\\lab-stage\\evidence.zip",
+    "C:\\Temp\\lab-stage\\notes.7z"
+  ]
+}

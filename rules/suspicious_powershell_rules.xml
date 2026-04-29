@@ -1,0 +1,10 @@
+<group name="wazuh,lab,portfolio,">
+  <rule id="100100" level="8">
+    <decoded_as>json</decoded_as>
+    <field name="message">(?i)(DownloadString|Invoke-WebRequest)</field>
+    <description>Lab: suspicious PowerShell download pattern</description>
+    <mitre>
+      <id>T1059</id>
+    </mitre>
+  </rule>
+</group>

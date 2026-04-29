@@ -1,0 +1,7 @@
+{
+  "host": "lab-endpoint-01",
+  "source": "synthetic",
+  "event_type": "process_creation",
+  "message": "PowerShell command line includes Invoke-WebRequest for a lab download test",
+  "command_line": "powershell.exe -ExecutionPolicy Bypass -Command Invoke-WebRequest -Uri https://example.invalid/lab.txt -OutFile C:\\Temp\\lab.txt"
+}

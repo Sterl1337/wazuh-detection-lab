@@ -1,0 +1,10 @@
+<group name="wazuh,lab,portfolio,">
+  <rule id="100110" level="7">
+    <decoded_as>json</decoded_as>
+    <field name="message">(?i)(\\bzip\\b|\\b7z\\b|\\brar\\b|\\btar\\b)</field>
+    <description>Lab: suspicious archive staging</description>
+    <mitre>
+      <id>T1074</id>
+    </mitre>
+  </rule>
+</group>

@@ -1,0 +1,23 @@
+[
+  {
+    "rule_id": 100100,
+    "level": 8,
+    "title": "Lab: suspicious PowerShell download pattern",
+    "status": "expected",
+    "source_event": "samples/events/powershell-download.json"
+  },
+  {
+    "rule_id": 100110,
+    "level": 7,
+    "title": "Lab: suspicious archive staging",
+    "status": "expected",
+    "source_event": "samples/events/archive-staging.json"
+  },
+  {
+    "rule_id": 100120,
+    "level": 10,
+    "title": "Lab: repeated failed logon burst",
+    "status": "expected",
+    "source_event": "samples/events/failed-logon-burst.json"
+  }
+]

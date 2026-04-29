@@ -1,0 +1,9 @@
+flowchart LR
+    A["Synthetic test event"] --> B["Wazuh agent"]
+    B --> C["Wazuh manager"]
+    C --> D["Custom local rules"]
+    D --> E["Alert generated"]
+    E --> F["Dashboard review"]
+
+    G["MITRE mapping"] -.-> D
+    H["Lessons learned"] -.-> F

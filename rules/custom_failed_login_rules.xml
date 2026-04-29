@@ -1,0 +1,10 @@
+<group name="wazuh,lab,portfolio,">
+  <rule id="100120" level="10">
+    <decoded_as>json</decoded_as>
+    <field name="message">(?i)(failed logon|authentication failure)</field>
+    <description>Lab: repeated failed logon burst</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+  </rule>
+</group>
