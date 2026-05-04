@@ -1,6 +1,6 @@
 # Wazuh Detection Lab
 
-Portfolio repository for a live Wazuh home lab built to practice SIEM deployment, Windows endpoint monitoring, Sysmon telemetry collection, and blue-team documentation.
+Portfolio repository for a live Wazuh home lab built to practice SIEM deployment, Windows and Linux endpoint monitoring, Sysmon telemetry collection, and blue-team documentation.
 
 ## Scope
 
@@ -8,6 +8,7 @@ This project documents a small but real lab:
 
 - Ubuntu Server VM hosting a single-node Wazuh deployment
 - Windows 11 host enrolled as an active Wazuh agent
+- Kali Linux VM enrolled as a second active Wazuh agent
 - Sysmon installed on the Windows endpoint for richer process and network telemetry
 - safe validation activity used to confirm ingestion, visibility, and ATT&CK-relevant event coverage
 
@@ -17,8 +18,9 @@ No malware or destructive payloads were used. Test activity was limited to safe 
 
 - SIEM deployment and access validation
 - Windows agent enrollment and health verification
+- Linux agent enrollment and health verification
 - Sysmon integration with Wazuh
-- basic threat hunting and ATT&CK-oriented analysis
+- multi-endpoint threat hunting and ATT&CK-oriented analysis
 - blue-team documentation discipline
 
 ## Lab components
@@ -31,6 +33,10 @@ No malware or destructive payloads were used. Test activity was limited to safe 
   - Windows 11 Home endpoint
   - Wazuh agent `v4.14.5`
   - Sysmon installed and forwarding `Microsoft-Windows-Sysmon/Operational`
+- `Kali-Lab`
+  - Kali Linux endpoint running in VirtualBox
+  - Wazuh agent connected to the same manager
+  - used for Linux-side command, file, and network telemetry
 
 ## Repository layout
 
@@ -70,8 +76,9 @@ The following items were validated in the lab:
 2. Windows agent `Ryozen` enrolled successfully and reported `active`
 3. Sysmon was installed and confirmed running on the Windows host
 4. Sysmon event channel collection was added to the Wazuh agent configuration
-5. Safe test activity generated process, network, and authentication-related telemetry
-6. Dashboard views populated with endpoint and ATT&CK-related data
+5. Kali Linux VM `Kali-Lab` enrolled successfully and reported `active`
+6. Safe test activity generated Windows and Linux process, network, and file-related telemetry
+7. Dashboard views populated with multi-endpoint and ATT&CK-related data
 
 ## Safe test activity used
 
@@ -82,6 +89,16 @@ Examples of benign validation commands used on the Windows endpoint:
 - `whoami`
 - `nslookup example.com`
 - temporary file create/delete operations
+
+Examples of benign validation commands used on the Kali endpoint:
+
+- `whoami`
+- `id`
+- `uname -a`
+- `sudo -l`
+- `/tmp` file create/delete operations
+- `curl -I https://example.com`
+- `nslookup example.com`
 
 These actions were used only to validate log flow and improve the quality of threat-hunting screenshots and writeups.
 
